@@ -1,0 +1,16 @@
+label {
+  display: inline-block;
+  margin: .5em 0;
+  color: #607D8B;
+  font-weight: bold;
+}
+.customer-details {
+  background-color: aliceblue;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.delete-button {
+  width: 100%;
+}
+

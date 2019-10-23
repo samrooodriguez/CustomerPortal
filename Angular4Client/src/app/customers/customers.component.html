@@ -1,0 +1,29 @@
+<div class="container">
+
+  <div class="container text-center">
+    <h1 class="title">Customers</h1>
+  </div>
+</div>
+
+<div class="container" id="customer-details">
+    <customer-detail [customer]="selectedCustomer"></customer-detail>
+</div>
+<table class="table table-dark table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cust of customers" [class.selected]="cust === selectedCustomer" (click)="onSelect(cust)">
+      <td>{{cust.id}}</td>
+      <td>{{ cust.firstName }}</td>
+      <td>{{ cust.lastName }}</td>
+      <td>{{ cust.email }}</td>
+    </tr>
+  </tbody>
+</table>
+

@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="row">
+<h3>Add a New Customer</h3>
+
+<div [hidden]="submitted">
+
+	<form (ngSubmit)="onSubmit()">
+
+      <label for="firstname">First Name</label>
+      <input type="text"
+				class="form-control" id="firstname" required
+				[(ngModel)]="customer.firstName" name="firstname">
+
+
+      <label for="lastname">Last Name</label>
+      <input type="text"
+				class="form-control" id="lastname" required
+				[(ngModel)]="customer.lastName" name="lastname">
+
+      <label for="lastname">Email</label>
+      <input type="text"
+				class="form-control" id="email" required
+        [(ngModel)]="customer.email" name="email">
+
+		<div class="container">
+			<button class="btn btn-dark" (click)="goBack()">Back</button>
+			<button type="submit" class="btn btn-success">Submit</button>
+    </div>
+  </form>
+    </div>
+  </div>
+</div>
+
+<div [hidden]="!submitted">
+
+    <div class="container">
+      <h4>You submitted successfully!</h4>
+      <button class="btn btn-dark" (click)="goBack()">Back</button>
+      <button class="btn btn-success" (click)="newCustomer()">Add</button>
+
+    </div>
+
